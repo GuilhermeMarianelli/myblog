@@ -8,6 +8,9 @@
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 		@if(Auth::check())
+			@role('manager')
+			<li><a href="{!! asset('/admin') !!}"></a></li>
+			@endrole
 			<li><a href="{!! asset('/users/logout') !!}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 		@else
 			<li><a href="{!! asset('/users/register') !!}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
